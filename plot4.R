@@ -1,5 +1,5 @@
 create_plot4 <- function () {
-        mydata <- read.csv('household.txt', 
+        mydata <- read.csv('household_power_consumption.txt', 
                            sep = ';', dec='.', 
                            header=TRUE, 
                            na.strings='?')
@@ -9,7 +9,9 @@ create_plot4 <- function () {
         
         mydata2<-mydata[mydata$Date == "2007-02-01" | mydata$Date == "2007-02-02",]
         
-        png(file = "plot4.png", width = 480, height = 480, units = "px")
+        png(file = "plot4.png", 
+            width = 480, height = 480, units = "px",
+            bg = "transparent")
         
         par(mfrow=c(2,2))
         

@@ -9,7 +9,9 @@ create_plot1 <- function () {
         
         mydata2<-mydata[mydata$Date == "2007-02-01" | mydata$Date == "2007-02-02",]
         
-        png(file = "plot1.png", width = 480, height = 480, units = "px")
+        png(file = "plot1.png", 
+            width = 480, height = 480, units = "px",
+            bg = "transparent")
         
         hist(mydata2$Global_active_power, 
              col="red", 
